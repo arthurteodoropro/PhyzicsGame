@@ -1,0 +1,164 @@
+/* Home.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+.home-container {
+  background-image: url('/src/assets/Background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: -8vh;
+  z-index: 2;
+}
+
+.home-title {
+  max-width: 60vw;
+  height: auto;
+  display: block;
+}
+
+.home-start-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: -5vh 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transition: transform 0.2s ease;
+  z-index: 1;
+}
+
+.home-start-button:hover {
+  transform: scale(1.05);
+}
+
+.home-start-button:active {
+  transform: scale(0.95);
+}
+
+.home-button-image {
+  max-width: 25vw;
+  height: auto;
+  display: block;
+}
+
+/* Mobile - Mostrar imagem de aviso */
+@media (max-width: 1024px) {
+  .home-container {
+    background-image: url('/src/assets/Mobile.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .home-content {
+    display: none; /* Esconde o conteúdo normal (título e botão) */
+  }
+  
+  /* Opcional: Mostrar uma mensagem adicional se necessário */
+  .home-container::after {
+    content: "Este jogo é otimizado para computadores. Por favor, acesse em um desktop para melhor experiência.";
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    max-width: 80%;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.6);
+    padding: 1rem;
+    border-radius: 10px;
+    display: none; /* Remove se quiser mostrar a mensagem */
+  }
+}
+
+/* Responsividade para tablets menores */
+@media (max-width: 768px) {
+  .home-title {
+    max-width: 70vw;
+  }
+  
+  .home-button-image {
+    max-width: 30vw;
+  }
+  
+  .title-wrapper {
+    margin-bottom: -10vh;
+  }
+  
+  .home-start-button {
+    margin-top: -8vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-title {
+    max-width: 75vw;
+  }
+  
+  .home-button-image {
+    max-width: 35vw;
+  }
+  
+  .title-wrapper {
+    margin-bottom: -12vh;
+  }
+  
+  .home-start-button {
+    margin-top: -10vh;
+  }
+}
+
+@media (max-height: 600px) {
+  .title-wrapper {
+    margin-bottom: -6vh;
+  }
+  
+  .home-start-button {
+    margin-top: -4vh;
+  }
+  
+  .home-button-image {
+    max-width: 22vw;
+  }
+  
+  .home-title {
+    max-width: 65vw;
+  }
+}

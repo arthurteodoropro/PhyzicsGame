@@ -1,0 +1,194 @@
+/* Welcome.css */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-size: 16px;
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive, sans-serif;
+}
+
+.welcome-container {
+  background-image: url('/src/assets/Background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.welcome-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.welcome-box {
+  position: relative;
+  background-color: white;
+  border-radius: 20px;
+  padding: 3rem 4rem;
+  max-width: 900px;
+  width: 85%;
+  height: 65vh;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.welcome-character {
+  position: absolute;
+  left: -150px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 450px;
+  width: auto;
+  z-index: 2;
+}
+
+.welcome-text {
+  flex: 1;
+  margin-left: 120px;
+  line-height: 1.8;
+  color: #333;
+  font-size: 1.4rem;
+}
+
+.welcome-text p {
+  margin-bottom: 1.5rem;
+}
+
+.welcome-text p:last-child {
+  margin-bottom: 0;
+}
+
+.welcome-text strong {
+  font-weight: bold;
+  color: #000;
+}
+
+.welcome-advance-button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 0;
+  padding: 1rem 3rem;
+  font-size: 2.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: all 0.2s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Creepster', 'Nosifer', 'Eater', 'Butcherman', cursive;
+  letter-spacing: 2px;
+}
+
+.welcome-advance-button:hover {
+  color: #f0f0f0;
+  transform: scale(1.1);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+.welcome-advance-button:active {
+  transform: scale(1.05);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Mobile - Mostrar imagem de aviso */
+@media (max-width: 1024px) {
+  .welcome-container {
+    background-image: url('/src/assets/Mobile.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .welcome-content {
+    display: none;
+  }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 1200px) {
+  .welcome-box {
+    max-width: 750px;
+    padding: 2.5rem 3rem;
+    height: 60vh;
+  }
+  
+  .welcome-character {
+    left: -100px;
+    height: 380px;
+  }
+  
+  .welcome-text {
+    margin-left: 100px;
+    font-size: 1.2rem;
+  }
+  
+  .welcome-advance-button {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .welcome-box {
+    max-width: 600px;
+    padding: 2rem 2.5rem;
+    height: 55vh;
+  }
+  
+  .welcome-character {
+    left: -80px;
+    height: 320px;
+  }
+  
+  .welcome-text {
+    margin-left: 80px;
+    font-size: 1.1rem;
+  }
+  
+  .welcome-advance-button {
+    padding: 0.8rem 2.5rem;
+    font-size: 2rem;
+  }
+}
+
+@media (max-height: 700px) {
+  .welcome-box {
+    padding: 2rem 3rem;
+    max-width: 800px;
+    height: 60vh;
+  }
+  
+  .welcome-character {
+    height: 350px;
+  }
+  
+  .welcome-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  .welcome-advance-button {
+    margin-top: 1.5rem;
+    padding: 0.8rem 2.5rem;
+    font-size: 1.8rem;
+  }
+}
