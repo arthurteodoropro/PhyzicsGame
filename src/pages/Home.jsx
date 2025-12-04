@@ -8,27 +8,26 @@ export default function Home({ onNavigate }) {
   return (
     <div className="home-container">
       <div className="home-content">
-  <div className="title-wrapper">
-    <img 
-      src="/src/assets/Titulo.svg" 
-      alt="Física Interativa" 
-      className="home-title"
-    />
-  </div>
+        <div className="title-wrapper">
+          <img 
+            src="/Titulo.svg" 
+            alt="Física Interativa" 
+            className="home-title"
+          />
+        </div>
 
-  <button 
-    className="home-start-button"
-    onClick={handleStart}
-    aria-label="Iniciar experiência"
-  >
-    <img 
-      src="/src/assets/Botão.png" 
-      alt="Iniciar" 
-      className="home-button-image"
-    />
-  </button>
-</div>
-
+        <button 
+          className="home-start-button"
+          onClick={handleStart}
+          aria-label="Iniciar experiência"
+        >
+          <img 
+            src="/Botão.png" 
+            alt="Iniciar" 
+            className="home-button-image"
+          />
+        </button>
+      </div>
     </div>
   );
 }

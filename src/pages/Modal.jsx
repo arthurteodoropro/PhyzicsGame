@@ -57,7 +57,7 @@ export default function Modal({ isOpen, onClose, errorCount }) {
       <div className="modal-container" onClick={(e) => e.stopPropagation()}>
         <div className="modal-box">
           <img 
-            src="/src/assets/Albert.png" 
+            src="/Albert.png" 
             alt="Albert Frankenstein" 
             className="modal-character"
           />

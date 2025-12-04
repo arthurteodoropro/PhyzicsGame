@@ -1,14 +1,26 @@
 import './Welcome.css';
 
 export default function Welcome({ onNavigate }) {
+  const handleAdvance = () => {
+    if (onNavigate && typeof onNavigate === 'function') {
+      onNavigate('playground');
+    } else {
+      console.error('onNavigate não está definido ou não é uma função');
+    }
+  };
+
   return (
     <div className="welcome-container">
       <div className="welcome-content">
         <div className="welcome-box">
           <img 
-            src="/src/assets/Albert.png" 
+            src="/Albert.png" 
             alt="Albert Frankenstein" 
             className="welcome-character"
+            onError={(e) => {
+              console.error('Erro ao carregar imagem Albert.png');
+              e.target.style.display = 'none';
+            }}
           />
           <div className="welcome-text">
             <p>
@@ -21,7 +33,7 @@ export default function Welcome({ onNavigate }) {
         </div>
         <button 
           className="welcome-advance-button"
-          onClick={() => onNavigate('playground')}
+          onClick={handleAdvance}
         >
           Avançar
         </button>
